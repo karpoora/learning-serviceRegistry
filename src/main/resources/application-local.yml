@@ -8,11 +8,16 @@ security:
     - console/**
     - health
 
+spring:
+  boot:
+    admin:
+      discovery:
+        services: server-admin
 management:
   security:
     enabled: false
 
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
