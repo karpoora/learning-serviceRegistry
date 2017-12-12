@@ -1,5 +1,5 @@
 FROM openjdk:8
-ADD target/microservices-service-registry.jar /var/lib/docker/tmp/docker-builder281239680/target/microservices-service-registry.jar
+ADD target/microservices-service-registry.jar microservices-service-registry.jar
 EXPOSE 8082
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-service-registry.jar"]
 
