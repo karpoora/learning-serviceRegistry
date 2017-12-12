@@ -1,6 +1,6 @@
 FROM openjdk:8
-FROM maven:3.2-jdk-7-onbuild
-CMD [mvn clean install]
+FROM maven:3.3-jdk-8-onbuild
+CMD ["mvn","clean","install"]
 ADD target/microservices-service-registry.jar microservices-service-registry.jar
 EXPOSE 8082
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-service-registry.jar"]
