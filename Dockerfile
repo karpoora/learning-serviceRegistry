@@ -1,6 +1,6 @@
 FROM openjdk:8
 FROM maven:3.3-jdk-8-onbuild
-ADD /usr/src/app/target/microservices-service-registry.jar microservices-service-registry.jar
+ADD usr/src/app/target/microservices-service-registry.jar microservices-service-registry.jar
 EXPOSE 8082
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-service-registry.jar"]
 
