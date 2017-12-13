@@ -4,7 +4,8 @@
 <configuration>
 	<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
 	<include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
-	<property name="LOG_FILE" value="/data/MicroService/log/serviceRegistry/serviceRegistry.log"/>
+	<!--<property name="LOG_FILE" value="/data/MicroService/log/serviceRegistry/serviceRegistry.log"/>-->
+	<property name="LOG_FILE" value="/serviceRegistry.log"/>
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
 			<layout class="com.microservices.service.registry.SpringBootJSON">
