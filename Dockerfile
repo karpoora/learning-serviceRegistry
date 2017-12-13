@@ -1,9 +1,11 @@
 FROM openjdk:8
-FROM maven:3.3-jdk-8-onbuild
-COPY target/microservices-service-registry.jar /var/lib/docker/tmp/docker-builder874961901/usr/src/app/target
 ADD target/microservices-service-registry.jar microservices-service-registry.jar
 EXPOSE 8082
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-service-registry.jar"]
+
+
+#docker tag <image-id> sundarapandiank/spring-cloud-repository:service-registry
+#docker push sundarapandiank/spring-cloud-repository:service-registry
 
 #docker build -f Dockerfile -t service-registry .
 #docker images

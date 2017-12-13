@@ -8,7 +8,7 @@
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
 			<layout class="com.microservices.service.registry.SpringBootJSON">
-				<application>microservice-server-config</application>
+				<application>microservice-server-registry</application>
 			</layout>
 		</encoder>
 	</appender>
@@ -16,7 +16,7 @@
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
 			<layout class="com.microservices.service.registry.SpringBootJSON">
-				<application>microservice-server-config</application>
+				<application>microservice-server-registry</application>
 			</layout>
 		</encoder>
 		<file>${LOG_FILE}</file>
