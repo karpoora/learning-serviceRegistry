@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM java:alpine
 ADD target/microservices-service-registry.jar microservices-service-registry.jar
 EXPOSE 8082
 ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-service-registry.jar"]
@@ -7,6 +7,7 @@ ENTRYPOINT ["java","-jar","-Dspring.profiles.active=local","microservices-servic
 #docker tag <image-id> sundarapandiank/spring-cloud-repository:service-registry
 #docker push sundarapandiank/spring-cloud-repository:service-registry
 
+#docker login
 #docker build -f Dockerfile -t service-registry .
 #docker images
 #docker run -p 8761:8082 service-registry
