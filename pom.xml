@@ -84,7 +84,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>microservices-service-registry</finalName>
+        <finalName>service-registry</finalName>
     </build>
 
     <profiles>
